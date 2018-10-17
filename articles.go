@@ -24,13 +24,14 @@ func articlesLogic() {
 
 	total := len(responseArray)
 
-	if initIndex != 0 {
-		if initIndex <= 0 || initIndex > total {
+	if initIndex != 1 {
+		if initIndex <= 1 || initIndex > total {
 			fmt.Println("Index range not valid")
 			os.Exit(0)
 		}
-		initIndex = (*initIndexFlag - 1)
 	}
+
+	initIndex = (*initIndexFlag - 1)
 
 	if total < 1 {
 		fmt.Println("There is no data to be processed")
